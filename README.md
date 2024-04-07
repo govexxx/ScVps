@@ -11,7 +11,7 @@
 
 # langkah kedua
 
-<code><pre>sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/memek.sh && chmod +x memek.sh && sed -i -e 's/\r$//' memek.sh && screen -S memek ./memek.sh</code></pre>
+<code><pre>sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/instal.sh&& chmod +x instal.sh && sed -i -e 's/\r$//' instal.sh && screen -S instal ./instal.sh</code></pre>
 
 # UNTUK PREMISSION (IZIN IP VPS) BISA LANGSUNG CHAT KE NOMER INI [LIST HARGA NYA] 
 👇👇
