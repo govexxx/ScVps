@@ -54,7 +54,7 @@ PERMISSION
 if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/R2GANGENG/permission/main/ipvps | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ipvps | grep $MYIP | awk '{print $3}')
 fi
 
 # =========================================
