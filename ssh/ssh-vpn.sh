@@ -20,7 +20,7 @@ commonname=none
 email=andyyuda51@gmail.com
 
 # simple password minimal
-curl -sS https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -128,13 +128,13 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/nginx.conf"
 mkdir -p /home/vps/public_html
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/newudpgw"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/newudpgw"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -243,7 +243,7 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 # banner /etc/issue.net
 sleep 1
 echo -e "[ ${green}INFO$NC ] Settings banner"
-wget -q -O /etc/issue.net "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/issue.net"
+wget -q -O /etc/issue.net "https://raw.githubusercontent.com/govexxx/ScVps/main/issue.net"
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
@@ -271,65 +271,65 @@ netfilter-persistent reload
 # download script
 cd /usr/bin
 # menu
-wget -O menu "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu.sh"
-wget -O menu-trial "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-trial.sh"
-wget -O menu-vmess "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-vmess.sh"
-wget -O menu-vless "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-vless.sh"
-wget -O running "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/running.sh"
-wget -O clearcache "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/clearcache.sh"
-wget -O menu-trgo "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-trgo.sh"
-wget -O menu-trojan "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-trojan.sh"
+wget -O menu "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu.sh"
+wget -O menu-trial "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-trial.sh"
+wget -O menu-vmess "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-vmess.sh"
+wget -O menu-vless "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-vless.sh"
+wget -O running "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/running.sh"
+wget -O clearcache "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/clearcache.sh"
+wget -O menu-trgo "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-trgo.sh"
+wget -O menu-trojan "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-trojan.sh"
 # ssh
-wget -O menu-ssh "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-ssh.sh"
-wget -O usernew "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/trial.sh"
-wget -O renew "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/renew.sh"
-wget -O hapus "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/hapus.sh"
-wget -O cek "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/cek.sh"
-wget -O member "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/member.sh"
-wget -O delete "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/delete.sh"
-wget -O autokill "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/tendang.sh"
-wget -O xp "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/xp.sh"
+wget -O menu-ssh "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-ssh.sh"
+wget -O usernew "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/trial.sh"
+wget -O renew "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/renew.sh"
+wget -O hapus "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/hapus.sh"
+wget -O cek "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/cek.sh"
+wget -O member "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/member.sh"
+wget -O delete "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/delete.sh"
+wget -O autokill "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/tendang.sh"
+wget -O xp "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/xp.sh"
 # menu system
-wget -O menu-set "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-set.sh"
-wget -O menu-domain "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-domain.sh"
-wget -O add-host "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/add-host.sh"
-wget -O port-change "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/port/port-change.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/xray/certv2ray.sh"
-wget -O menu-webmin "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-webmin.sh"
-wget -O speedtest "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/speedtest_cli.py"
-wget -O about "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/about.sh"
-wget -O auto-reboot "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/auto-reboot.sh"
-wget -O restart "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/restart.sh"
-wget -O bw "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/bw.sh"
+wget -O menu-set "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-set.sh"
+wget -O menu-domain "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-domain.sh"
+wget -O add-host "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/add-host.sh"
+wget -O port-change "https://raw.githubusercontent.com/govexxx/ScVps/main/port/port-change.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/govexxx/ScVps/main/xray/certv2ray.sh"
+wget -O menu-webmin "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-webmin.sh"
+wget -O speedtest "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/speedtest_cli.py"
+wget -O about "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/about.sh"
+wget -O auto-reboot "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/auto-reboot.sh"
+wget -O restart "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/restart.sh"
+wget -O bw "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/bw.sh"
 # theme
-wget -O menu-theme "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/theme/menu-theme.sh"
-wget -O menu1 "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/theme/menu1.sh"
-wget -O menu2 "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/theme/menu2.sh"
-wget -O menu3 "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/theme/menu3.sh"
-wget -O menu4 "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/theme/menu4.sh"
-wget -O menu5 "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/theme/menu5.sh"
+wget -O menu-theme "https://raw.githubusercontent.com/govexxx/ScVps/main/theme/menu-theme.sh"
+wget -O menu1 "https://raw.githubusercontent.com/govexxx/ScVps/main/theme/menu1.sh"
+wget -O menu2 "https://raw.githubusercontent.com/govexxx/ScVps/main/theme/menu2.sh"
+wget -O menu3 "https://raw.githubusercontent.com/govexxx/ScVps/main/theme/menu3.sh"
+wget -O menu4 "https://raw.githubusercontent.com/govexxx/ScVps/main/theme/menu4.sh"
+wget -O menu5 "https://raw.githubusercontent.com/govexxx/ScVps/main/theme/menu5.sh"
 #
-wget -O port-ssl "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/port/port-ssl.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/port/port-ovpn.sh"
-wget -O acs-set "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/acs-set.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/govexxx/ScVps/main/port/port-ssl.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/govexxx/ScVps/main/port/port-ovpn.sh"
+wget -O acs-set "https://raw.githubusercontent.com/govexxx/ScVps/main/acs-set.sh"
 # main
-wget -O status "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/status.sh"
-wget -O sshws "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/sshws/sshws.sh"
+wget -O status "https://raw.githubusercontent.com/govexxx/ScVps/main/status.sh"
+wget -O sshws "https://raw.githubusercontent.com/govexxx/ScVps/main/sshws/sshws.sh"
 # main
-wget -O status "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/status.sh"
-wget -O menu-backup "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-backup.sh"
-wget -O backup "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/backup/backup.sh"
-wget -O restore "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/backup/restore.sh"
+wget -O status "https://raw.githubusercontent.com/govexxx/ScVps/main/status.sh"
+wget -O menu-backup "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-backup.sh"
+wget -O backup "https://raw.githubusercontent.com/govexxx/ScVps/main/backup/backup.sh"
+wget -O restore "https://raw.githubusercontent.com/govexxx/ScVps/main/backup/restore.sh"
 
-wget -O jam "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/jam.sh"
+wget -O jam "https://raw.githubusercontent.com/govexxx/ScVps/main/jam.sh"
 # bot telegram
-wget -q -O /usr/bin/xolpanel "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/xolpanel/xolpanel.sh"
-wget -q -O /usr/bin/lock "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/user-lock.sh"
-wget -q -O /usr/bin/unlock "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/user-unlock.sh"
-wget -q -O /usr/bin/update "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/update.sh"
+wget -q -O /usr/bin/xolpanel "https://raw.githubusercontent.com/govexxx/ScVps/main/xolpanel/xolpanel.sh"
+wget -q -O /usr/bin/lock "https://raw.githubusercontent.com/govexxx/ScVps/main/user-lock.sh"
+wget -q -O /usr/bin/unlock "https://raw.githubusercontent.com/govexxx/ScVps/main/user-unlock.sh"
+wget -q -O /usr/bin/update "https://raw.githubusercontent.com/govexxx/ScVps/main/update.sh"
 chmod +x xolpanel
 # Menu
 chmod +x menu
