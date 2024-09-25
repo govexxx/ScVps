@@ -4,8 +4,8 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 # Getting
 clear
-export CHATID="1813590936"
-export KEY="6159615642:AAEoAjxKYMwN81Pcgas7b-F2GFYRB0kQomU"
+export CHATID=""
+export KEY=""
 export TIME="10"
 export URL="https://api.telegram.org/bot$KEY/sendMessage"
 clear
@@ -125,7 +125,7 @@ echo -e "
 GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]
 " | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\E[40;1;37m  SCRIPT PREMIUM BY Raden Rizki  \E[0m" | tee -a /etc/log-create-user.log
+echo -e "\E[40;1;37m  SCRIPT PREMIUM  \E[0m" | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 fi
 echo "" | tee -a /etc/log-create-user.log
