@@ -10,7 +10,7 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 fi
 echo ""
 version=$(cat /home/ver)
-ver=$( curl https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/version )
+ver=$( curl https://raw.githubusercontent.com/govexxx/ScVps/main/version )
 clear
 # LINE COLOUR
 line=$(cat /etc/line)
@@ -28,7 +28,7 @@ Info1="${Green_font_prefix}($version)${Font_color_suffix}"
 Info2="${Green_font_prefix}(OLD VERSION)${Font_color_suffix}"
 Error="Version ${Green_font_prefix}[$ver]${Font_color_suffix} available${Red_font_prefix}[Please Update]${Font_color_suffix}"
 version=$(cat /home/ver)
-new_version=$( curl https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/newversion | grep $version )
+new_version=$( curl https://raw.githubusercontent.com/govexxx/ScVps/main/newversion | grep $version )
 #Status Version
 if [ $version = $new_version ]; then
 sts="${Info2}"
@@ -58,7 +58,7 @@ read -p "PPlease Choose 1 or x : " option2
 case $option2 in
 1)
 version=$(cat /home/ver)
-new_version=$( curl https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/newversion | grep $version )
+new_version=$( curl https://raw.githubusercontent.com/govexxx/ScVps/main/newversion | grep $version )
 if [ $version = $new_version ]; then
 clear
 echo ""
@@ -98,47 +98,47 @@ echo ""
 echo -e "\e[0;32mNew Version Downloading started!\e[0m"
 sleep 2
 cd /usr/bin
-wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/usernew.sh"
-wget -q -O /usr/bin/auto-reboot "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/auto-reboot.sh"
-wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/restart.sh"
-wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/tendang.sh"
-wget -q -O /usr/bin/clearcache "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/clearcache.sh"
-wget -q -O /usr/bin/running "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/running.sh"
-wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/speedtest_cli.py"
-wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-vless.sh"
-wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-vmess.sh"
-wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-trojan.sh"
-wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-ssh.sh"
-wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-backup.sh"
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu.sh"
-wget -q -O /usr/bin/menu-webmin "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-webmin.sh"
-wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/xp.sh"
-wget -q -O /usr/bin/update "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/update.sh"
-wget -q -O /usr/bin/add-host "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/add-host.sh"
-wget -q -O /usr/bin/certv2ray "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/xray/certv2ray.sh"
-wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-set.sh"
-wget -q -O /usr/bin/about "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/about.sh"
+wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/usernew.sh"
+wget -q -O /usr/bin/auto-reboot "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/auto-reboot.sh"
+wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/restart.sh"
+wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/tendang.sh"
+wget -q -O /usr/bin/clearcache "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/clearcache.sh"
+wget -q -O /usr/bin/running "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/running.sh"
+wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/speedtest_cli.py"
+wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-vless.sh"
+wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-vmess.sh"
+wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-trojan.sh"
+wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-ssh.sh"
+wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-backup.sh"
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu.sh"
+wget -q -O /usr/bin/menu-webmin "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-webmin.sh"
+wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/xp.sh"
+wget -q -O /usr/bin/update "https://raw.githubusercontent.com/govexxx/ScVps/main/update.sh"
+wget -q -O /usr/bin/add-host "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/add-host.sh"
+wget -q -O /usr/bin/certv2ray "https://raw.githubusercontent.com/govexxx/ScVps/main/xray/certv2ray.sh"
+wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-set.sh"
+wget -q -O /usr/bin/about "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/about.sh"
 #wget -q -O /usr/bin/add4 "https://raw.githubusercontent.com/Bringas-tunnel/permission/main/add4.sh"
-wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-backup.sh"
-wget -q -O /usr/bin/trial "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/trial.sh"
-wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ssh/usernew.sh"
-wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/xray/add-tr.sh"
-wget -q -O /usr/bin/del-tr "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/xray/del-tr.sh"
-wget -q -O /usr/bin/cek-tr "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/xray/cek-tr.sh"
-wget -q -O /usr/bin/trialtrojan "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/xray/trialtrojan.sh"
-wget -q -O /usr/bin/renew-tr "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/xray/renew-tr.sh"
-wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/xray/add-ws.sh"
-wget -q -O /usr/bin/del-ws "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/xray/del-ws.sh"
-wget -q -O /usr/bin/cek-ws "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/xray/cek-ws.sh"
-wget -q -O /usr/bin/renew-ws "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/xray/renew-ws.sh"
-wget -q -O /usr/bin/trialvmess "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/xray/trialvmess.sh"
-wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/xray/add-vless.sh"
-wget -q -O /usr/bin/del-vless "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/xray/del-vless.sh"
-wget -q -O /usr/bin/cek-vless "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/xray/cek-vless.sh"
-wget -q -O /usr/bin/renew-vless "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/xray/renew-vless.sh"
-wget -q -O /usr/bin/trialvless "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/xray/trialvless.sh"
-wget -q -O /usr/bin/menu-trial "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/menu/menu-trial.sh"
-wget -q -O /usr/bin/menu-theme "https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/theme/menu-theme.sh"
+wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-backup.sh"
+wget -q -O /usr/bin/trial "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/trial.sh"
+wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/govexxx/ScVps/main/ssh/usernew.sh"
+wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/govexxx/ScVps/main/xray/add-tr.sh"
+wget -q -O /usr/bin/del-tr "https://raw.githubusercontent.com/govexxx/ScVps/main/xray/del-tr.sh"
+wget -q -O /usr/bin/cek-tr "https://raw.githubusercontent.com/govexxx/ScVps/main/xray/cek-tr.sh"
+wget -q -O /usr/bin/trialtrojan "https://raw.githubusercontent.com/govexxx/ScVps/main/xray/trialtrojan.sh"
+wget -q -O /usr/bin/renew-tr "https://raw.githubusercontent.com/govexxx/ScVps/main/xray/renew-tr.sh"
+wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/govexxx/ScVps/main/xray/add-ws.sh"
+wget -q -O /usr/bin/del-ws "https://raw.githubusercontent.com/govexxx/ScVps/main/xray/del-ws.sh"
+wget -q -O /usr/bin/cek-ws "https://raw.githubusercontent.com/govexxx/ScVps/main/xray/cek-ws.sh"
+wget -q -O /usr/bin/renew-ws "https://raw.githubusercontent.com/govexxx/ScVps/main/xray/renew-ws.sh"
+wget -q -O /usr/bin/trialvmess "https://raw.githubusercontent.com/govexxx/ScVps/main/xray/trialvmess.sh"
+wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/govexxx/ScVps/main/xray/add-vless.sh"
+wget -q -O /usr/bin/del-vless "https://raw.githubusercontent.com/govexxx/ScVps/main/xray/del-vless.sh"
+wget -q -O /usr/bin/cek-vless "https://raw.githubusercontent.com/govexxx/ScVps/main/xray/cek-vless.sh"
+wget -q -O /usr/bin/renew-vless "https://raw.githubusercontent.com/govexxx/ScVps/main/xray/renew-vless.sh"
+wget -q -O /usr/bin/trialvless "https://raw.githubusercontent.com/govexxx/ScVps/main/xray/trialvless.sh"
+wget -q -O /usr/bin/menu-trial "https://raw.githubusercontent.com/govexxx/ScVps/main/menu/menu-trial.sh"
+wget -q -O /usr/bin/menu-theme "https://raw.githubusercontent.com/govexxx/ScVps/main/theme/menu-theme.sh"
 chmod +x /usr/bin/usernew
 chmod +x /usr/bin/auto-reboot
 chmod +x /usr/bin/restart
@@ -190,7 +190,7 @@ clear
 echo -e ""
 echo -e "\e[0;32mDownloaded successfully!\e[0m"
 echo ""
-ver=$( curl https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/version )
+ver=$( curl https://raw.githubusercontent.com/govexxx/ScVps/main/version )
 sleep 1
 echo -e "\e[0;32mPatching New Update, Please Wait...\e[0m"
 echo ""
