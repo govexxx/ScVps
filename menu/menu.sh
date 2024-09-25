@@ -1,7 +1,7 @@
  #!/bin/bash
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ipvps > /root/tmp
+    curl -sS https://raw.githubusercontent.com/govexxx/ScVps/main/ipvps > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -19,7 +19,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ipvps | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/govexxx/ScVps/main/ipvps | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -36,7 +36,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ipvps | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/govexxx/ScVps/main/ipvps | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -54,7 +54,7 @@ PERMISSION
 if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/Baimkuy/AUTOSC/main/ipvps | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/govexxx/ScVps/main/ipvps | grep $MYIP | awk '{print $3}')
 fi
 
 # =========================================
@@ -254,7 +254,7 @@ export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BICyan} │                  ${BIWhite}${UWhite} /Baimkuy/AUTOSC/${NC}"
+echo -e "${BICyan} │                  ${BIWhite}${UWhite} MANTISS${NC}"
 echo -e "${BICyan} │"
 echo -e "${BICyan} │  ${BICyan}OS        :  ${BIYellow}$( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' ) ( $( uname -m) )${NC}"
 echo -e "${BICyan} │  ${BICyan}CPU       :  ${BIYellow}$cpu_usage${NC}"
@@ -264,8 +264,8 @@ echo -e "${BICyan} │  ${BICyan}RAM       :  ${BIYellow}$totalram MB${NC}"
 echo -e "${BICyan} │  ${BICyan}SWAP RAM  :  ${BIYellow}$uram / $tram MB${NC}"
 echo -e "${BICyan} │  ${BICyan}IP-VPS    :  ${BIYellow}$IPVPS${NC}"
 echo -e "${BICyan} │  ${BICyan}REBOOT    :  ${BIYellow}00:00 ( Jam 12 malam )${NC}"
-echo -e "${BICyan} │  ${BICyan}WHATSAP   :  ${BIYellow}085871658528${NC}"
-echo -e "${BICyan} │  ${BICyan}DEVELOVER :  ${BIYellow}🇮BAIMSTORE ${NC}"
+echo -e "${BICyan} │  ${BICyan}TELEGRAM  :  ${BIYellow}xmantissx${NC}"
+echo -e "${BICyan} │  ${BICyan}OWENER    :  ${BIYellow}🇮MANTISS ${NC}"
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}" 
 echo -e "${BICyan} │  ${BIYellow}SSH         VMESS           VLESS          TROJAN $NC" 
